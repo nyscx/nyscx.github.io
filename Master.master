@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>HEALTHSYS</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div runat="server" id="headerfile">
+            <asp:Table runat="server" Style="min-width: 100%;">
+                <asp:TableRow>
+                    <asp:TableCell Width="20%"><a id="logo" href="home.aspx"><h1>HEALTHSYS <span style="color:red; font-weight:bolder;">+</span></h1></a></asp:TableCell>
+                    <asp:TableCell Width="40%" />
+                    <asp:TableCell Width="35%" HorizontalAlign="Center">
+                        <div id="header">
+
+                            <asp:Table runat="server" ID="login">
+                                <asp:TableRow>
+                                    <asp:TableCell runat="server" ID="loginMode">
+                                        Username:
+                <asp:TextBox ID="username" runat="server" CausesValidation="false"></asp:TextBox>
+                                        Password:
+                <asp:TextBox ID="passwd" TextMode="Password" CausesValidation="false" runat="server"></asp:TextBox>
+                                        <asp:Button ID="submitVal" CssClass="mainbtType" BackColor="White" OnClick="login_Click" runat="server" Text="LOGIN" />
+                                    </asp:TableCell>
+                                </asp:TableRow>
+                                <asp:TableRow>
+                                    <asp:TableCell>
+                                         <h2>
+                                            <asp:Label ID="pass" runat="server" Text=""></asp:Label></h2>
+                                        <a id="signup" runat="server" href="Signup.aspx">register for a new account</a>
+                                        <asp:LinkButton ID="logout" CausesValidation="false" runat="server" OnClick="logout_Click" Visible="false">Logout</asp:LinkButton>
+                                    </asp:TableCell>
+                                </asp:TableRow>
+                            </asp:Table>
+                        </div>
+                    </asp:TableCell>
+                    <asp:TableCell Width="5%" />
+                </asp:TableRow>
+            </asp:Table>
+
+            
+
+        </div>
+        <div id="mFrame">
+             <div id="controls" style="vertical-align:middle; align-items:center;">
+        <asp:Table runat="server" Width="100%" HorizontalAlign="Center">
+            <asp:TableRow HorizontalAlign="Center">
+                <asp:TableCell>
+                    <asp:Button ID="poly" CssClass="mainbtType" Width="20%" Height="40px" BackColor="IndianRed" OnClick="loadPoly_Click" runat="server" CausesValidation="false" Text="FIND POLYCLINICS" />
+                    <asp:Button ID="chas" CssClass="mainbtType" OnClick="chas_Click" Width="20%" Height="40px" BackColor="Orange" runat="server" Text="FIND CHAS CLINICS" />
+                    <asp:Button ID="dengue" CssClass="mainbtType" Width="20%" OnClick="dengue_Click" Height="40px" BackColor="LightGreen" runat="server" Text="FIND DENGUE HOTSPOTS" />
+                    <asp:Button ID="food_Btn" Visible="false" CssClass="mainbtType" Width="20%" OnClick="food_Btn_Click" Height="40px" BackColor="Yellow" runat="server" Text="UPDATE FOOD INTAKE" />
+                    <asp:Button ID="healthstatus_Btn" Visible="false" CssClass="mainbtType" Width="20%" OnClick="healthstatus_Btn_Click" Height="40px" BackColor="AliceBlue" runat="server" Text="UPDATE HEALTH STATUS" />
+                                        
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+    </div>
+            <asp:ContentPlaceHolder ID="bodyCPH" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

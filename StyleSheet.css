@@ -1,0 +1,58 @@
+﻿body, #bodyCPH {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    color: black;
+    font-family:'Tw Cen MT';
+    background-color: white;
+    overflow: hidden;
+}
+
+.calorieInfo{
+    font-family:'Tw Cen MT';
+    font-size:40px;
+    font-weight:900;
+}
+
+#logo{
+    font-style:initial;
+    color:black;
+}
+
+.mainbtType{
+    font-family:'Tw Cen MT';
+    font-weight:bolder;
+    font-size:large;
+
+}
+
+#headCPH{
+    min-width:inherit;
+    min-height:10vh;
+    font-family:Raleway;
+    font-size:large;
+    float:none;
+    align-content:center;
+}
+
+#mFrame{
+    background-color:#f4f9e8;
+    font-family:Raleway;
+    min-height:90vh;
+    min-width:95vh;
+}
+
+#bodyCPH{
+    background-color:black;
+}
+
+#controls{
+    height:6vh;
+}
+
+#map{
+    height:80vh;
+    width:100%;
+}
